@@ -1,0 +1,159 @@
+/*
+COLORS:
++Pumpkin orange color:  #E96F33
+Default orange color:   #F39C12
+Sunflower yellow color: #F1C40F
++Lime green color:      #BDD63A
+Moss green color:       #98C235
+(+ means non-negotiable colors.)
+
+*/
+
+
+/* ----------------------------------------------- */
+/* ------------------BASIC SETUP------------------ */
+/* ----------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    /* Content is clipped if it overflows to the left or right */
+    overflow-x: hidden;
+}
+
+/* ----------------------------------------------- */
+/* --------------REUSABLE COMPONENTS-------------- */
+/* ----------------------------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/* ----- BUTTONS ----- */
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #BDD63A;
+    border: 1px solid #BDD63A;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #BDD63A;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #FFF;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #BDD63A;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #FFF;
+    color: #fff;
+} 
+
+/* ----------------------------------------------- */
+/* --------------------HEADER--------------------- */
+/* ----------------------------------------------- */
+
+header {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(img/FloorPlan.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1)), url(img/FloorPlan.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+/* Main navigation */
+nav {
+    background-color: #FFF;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 37px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 0px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 10px 13px;
+    color: #000;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    font-size: 100%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #E96F33;
+}
