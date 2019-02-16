@@ -23,9 +23,9 @@ Moss green color:       #98C235
 html,
 body {
     background-color: #fff;
-    color: #555;
+    color: #333;
     font-family: 'Roboto', 'Arial', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
     text-rendering: optimizeLegibility;
     /* Content is clipped if it overflows to the left or right */
@@ -47,6 +47,38 @@ section {
 
 .box {
     padding: 1%;
+}
+
+/* ----- HEADINGS ----- */
+
+h1 {
+    font-size: 300%;
+    font-weight: 900;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h2, h3 {
+    font-weight: 600;
+    font-size: 140%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 120%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h5 {
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /* ----- BUTTONS ----- */
@@ -84,13 +116,58 @@ input[type=submit]:active {
     background-color: #FFF;
 }
 
-.btn-full:hover,
-.btn-full:active {
+.btn-2:hover,
+.btn-2:active {
     border: 1px solid #BDD63A;
 }
 
-.btn-ghost:hover,
-.btn-ghost:active {
+.btn-2-ghost:hover,
+.btn-2-ghost:active {
+    border: 1px solid #FFF;
+    color: #fff;
+}
+
+btn-2:link,
+.btn-2:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-2:link,
+.btn-2:visited,
+input[type=submit] {
+    background-color: #F39C12;
+    border: 1px solid #F39C12;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-2-ghost:link,
+.btn-2-ghost:visited {
+    border: 1px solid #F39C12;
+    color: #e67e22;
+}
+
+.btn-2:hover,
+.btn-2:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #FFF;
+}
+
+.btn-2:hover,
+.btn-2:active {
+    border: 1px solid #F39C12;
+}
+
+.btn-2-ghost:hover,
+.btn-2-ghost:active {
     border: 1px solid #FFF;
     color: #fff;
 } 
@@ -100,23 +177,42 @@ input[type=submit]:active {
 /* ----------------------------------------------- */
 
 header {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(img/FloorPlan.png);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(img/FloorPlan.png);
+    height: 44vh;
+}
+
+.bg-image {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0)), url(img/FloorPlan.png);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.0)), url(img/FloorPlan.png);
+    filter: blur(1.5px);
+    height: 100%;
     background-size: cover;
     background-position: center;
-    height: 100vh;
     background-attachment: fixed;
 }
 
+/* Splash/index navigation */
 .hero-text-box {
+    background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
+    width: 800px;
+    padding: 20px;
+    top: 30%;
+    left: 80%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-90%, -50%);
 }
+
+.hero-text-box h1,
+.hero-text-box h4 {
+    padding-left: 10px;
+}
+
+.hero-innerbox {
+    border-left: solid 6px #F1C40F;
+}
+
+/* Navbar */
 
 .logo {
     height: 80px;
@@ -126,9 +222,38 @@ header {
     margin-bottom: 15px;
 }
 
+.index-nav {
+    float: left;
+    list-style: none;
+    margin-top: 5px;
+}
+
+.index-nav li {
+    display: inline-block;
+    margin-left: 0px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 10px 13px;
+    color: #000;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    font-size: 100%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #E96F33;
+}
+
 /* Main navigation */
 nav {
     background-color: #FFF;
+    height: 12vh;
 }
 
 .main-nav {
@@ -157,6 +282,52 @@ nav {
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #E96F33;
+}
+
+/* ----------------------------------------------- */
+/* -------------------BUY TILES------------------- */
+/* ----------------------------------------------- */
+
+.tile-image {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(img/whitetiles.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+    filter: blur(px);
+    height: 44vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.tile-innerbox {
+    background-color: rgba(255, 255, 255, 0.0);
+    position: absolute;
+    width: 800px;
+    padding: 20px;
+    top: 733px;
+    left: 80%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-90%, -50%);
+}
+
+.tile-innerbox h2,
+.tile-innerbox h3,
+.tile-innerbox h5 {
+    padding-left: 10px;
+    padding: 4px;
+}
+
+.tile-innerbox h3 {
+    color: #98C235;
+    text-transform: uppercase;
+}
+
+.tile-innerbox h5 {
+    border-top: solid 6px #F1C40F; 
+    text-transform: uppercase;
+    padding-bottom: 20px;
 }
 
 /* ----------------------------------------------- */

@@ -17,11 +17,12 @@
         <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
         
         <!-- CSS References -->
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/Grid.css">
+        <!-- Make sure normalize.css is before style otherwise it will override style.css! -->
         <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         
         <!-- links and metadata go here -->
         
@@ -44,15 +45,30 @@
                     </ul>
                 </div>
             </nav>
+            <div class="bg-image"></div>
             <div class="hero-text-box">
-                <h1>The campiagn to "retrofit the kitchen":</h3>
-                <h1>Our New Headquarters</h1>
-                <a class="btn btn-full js--scroll-to-plans" href="#buytile">Buy a Tile</a>
-                <a class="btn btn-ghost js--scroll-to-start" href="#equipment">Equipment List</a>
-                <a class="btn btn-ghost js--scroll-to-start" href="#floorplan">Floor Plan</a>
-                <a class="btn btn-ghost js--scroll-to-start" href="#founders">Founders Circle</a>
+                <div class="hero-innerbox">
+                    <h4>The campaign to "retrofit the kitchen":</h4>
+                    <h1>Our New Headquarters</h1>
+                </div>
+                <ul class="index-nav js--index-nav">
+                <li><a class="btn btn-2 js--scroll-to-plans" href="#buytile">Buy a Tile</a></li>
+                <li><a class="btn btn-2-ghost js--scroll-to-start" href="#equipment">Equipment List</a></li>
+                <li><a class="btn btn-2-ghost js--scroll-to-start" href="#floorplan">Floor Plan</a></li>
+                <li><a class="btn btn-2-ghost js--scroll-to-start" href="#founders">Founders Circle</a></li>
+                </ul>
             </div>
         </header>
+        
+        <section class="section-tile js--section-tile" id="tile">
+            <div class="tile-image"></div>
+            <div class = "tile-innerbox">
+                <h3>$250 Each</h3>
+                <h2>Personalized Engraved Tile</h2>
+                <h5><br>Have your name engraved on a tile at our new headquarters.</h5>
+                <a class="btn btn-2 js--scroll-to-plans" href="#buytile">Reserve yours now</a>
+            </div>
+        </section>
         
         <section class="section-contact js--section-contact" id="contact">
             <div class="row">
