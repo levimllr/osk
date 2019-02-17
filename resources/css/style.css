@@ -60,7 +60,7 @@ h1 {
 
 h2, h3 {
     font-weight: 600;
-    font-size: 140%;
+    font-size: 200%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -116,6 +116,18 @@ input[type=submit]:active {
     background-color: #FFF;
 }
 
+.btn-2:link,
+.btn-2:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
 .btn-2:hover,
 .btn-2:active {
     border: 1px solid #BDD63A;
@@ -127,31 +139,21 @@ input[type=submit]:active {
     color: #fff;
 }
 
-btn-2:link,
-.btn-2:visited,
-input[type=submit] {
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 6px;
-    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
-    transition: background-color 0.2s, border 0.2s, color 0.2s;
-}
-
 .btn-2:link,
 .btn-2:visited,
 input[type=submit] {
     background-color: #F39C12;
     border: 1px solid #F39C12;
-    color: #fff;
-    margin-right: 15px;
+    color: #333;
+    margin-right: 10px;
 }
 
 .btn-2-ghost:link,
 .btn-2-ghost:visited {
     border: 1px solid #F39C12;
+    padding: 10px 13px;
     color: #e67e22;
+        margin-right: 10px;
 }
 
 .btn-2:hover,
@@ -168,8 +170,9 @@ input[type=submit]:active {
 
 .btn-2-ghost:hover,
 .btn-2-ghost:active {
-    border: 1px solid #FFF;
-    color: #fff;
+    border: 1px solid #F39C12;
+    background-color: #F39C12;
+    color: #333;
 } 
 
 /* ----------------------------------------------- */
@@ -181,8 +184,8 @@ header {
 }
 
 .bg-image {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0)), url(img/FloorPlan.png);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.0)), url(img/FloorPlan.png);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/FloorPlan.png);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(img/FloorPlan.png);
     filter: blur(1.5px);
     height: 100%;
     background-size: cover;
@@ -331,14 +334,76 @@ nav {
 }
 
 /* ----------------------------------------------- */
-/* -----------------TESTIMONIALS------------------ */
+/* ------------------FLOORPLAN-------------------- */
+/* ----------------------------------------------- */
+.section-plan {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(img/FloorPlan.png);
+    background-image: linear-gradient(rgba(255, 255, 255, 0. 0), rgba(255, 255, 255, 0.0)), url(img/FloorPlan.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ----------------------------------------------- */
+/* ------------------CONTACT US------------------- */
 /* ----------------------------------------------- */
 .section-contact {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/Group.png);
     background-size: cover;
-    color: #fff;
     background-attachment: fixed;
+    height: 50vh;
 }
+
+.contact-text-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    width: 400px;
+    padding: 20px;
+    top: 40px;
+    left: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-90%, -50%);
+}
+
+.contact-text-box h2,
+.contact-text-box h5 {
+    padding-left: 10px;
+}
+
+.contact-innerbox {
+    border-left: solid 6px #F1C40F;
+}
+
+/* ----------------------------------------------- */
+/* FORM */
+/* ----------------------------------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {outline: none;}
+
+/* ----------------------------------------------- */
+/* -----------------TESTIMONIALS------------------ */
+/* ----------------------------------------------- */
 
 .box img {
     display: block;
