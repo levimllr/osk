@@ -485,6 +485,7 @@ blockquote {
 footer {
     border-top: solid 6px #BDD63A;
     list-style: none;
+    text-align: center;
 }
 
 footer p {
@@ -500,13 +501,37 @@ footer p {
 .social-links :visited{
     text-decoration: none;
     color: #333;
+    
+}
+
+.footer-nav a:hover,
+.footer-nav a:active
+{
+    border-bottom: 1px solid #E96F33;
+    transition: background-color 0.2s,  color 0.2s, border 0.2s,;
+}
+
+.footer-nav h4:hover,
+.footer-nav h4:active
+{
+    color: #E96F33;
+    transition: background-color 0.2s,  color 0.2s, border 0.2s,;
+}
+
+.social-links :hover,
+.social-links :active
+{
+    color: #E96F33;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
 .footer-nav {
     list-style: none;
     font-size: 80%;
     font-weight: 100;
-    padding: 10px;
+    margin-left: 10%;
+    margin-top: 3%;
+    text-align: left;
 }
 
 .footer-nav h4{
@@ -519,13 +544,17 @@ footer p {
 }
 
 .social-links {
+    width: 90%;
     list-style: none;
-    float: right;
-    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    font-size: 150%;
+    margin: 0 auto;
 }
 
 .social-links li {
     display: inline-block;
+    margin-left: 20px;
     margin-right: 20px;
 }
 
@@ -534,34 +563,27 @@ footer p {
     margin: 0 auto;
 }
 
-.news-form label {
-    background-color: #F39C12;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 3px;
-    border: 1px solid #F39C12;
-    float: right;
-}
-
 .news-form input[type=text],
 .news-form input[type=email],
+.news-form input[type=submit],
 .news-form select,
 .news-form textarea {
-    width: 100%;
-    padding: 7px;
+    width: 140%;
+    padding: 4px;
     border-radius: 3px;
     border: 1px solid #ccc;
 }
 .news-form input[type=submit] {
-    margin: 10px 5px 10px 5px;
     background-color: #F39C12;
     border: 1px solid #F39C12;
     color: #333;
-    margin-right: 15px; 
+    padding-left: auto;
+    padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330%;
+    margin-top: 0; 
 }
-
 
 .badge {
     height: 75px;
